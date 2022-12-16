@@ -7,15 +7,33 @@ ul{
     display: flex;
     justify-content: space-around;
     padding-top: 3rem;
+    height: 100px;
+    align-items: center;
     li{
         list-style: none;
         a{
-            color: black;
+            color: white;
             text-decoration: none;
             text-transform: uppercase;
+            font-weight: bold;
+            font-size: 20px;
         }
     }
 }
+a:hover{
+    color: black;
+}
 .my_col{
     margin-top: 2rem;
+}
+.bg_red{
+    background-color: red;
+    height: 100%;
+}
+footer{
+    h2{
+        color: white;
+        font-weight: bold;
+        text-align: center;
+    }
 }

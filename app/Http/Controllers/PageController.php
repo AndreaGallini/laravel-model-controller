@@ -15,12 +15,13 @@ class PageController extends Controller
     }
     public function topFive()
     {
-
-        return view('topFive');
+        $topFive = Movie::where('vote', '>', 1)->orderBy('vote', 'desc')->limit(5)->get();
+        return view('topFive', compact('topFive'));
     }
     public function todayMovie()
     {
+        $todayMovie = Movie::where('title', 'Il Padrino')->get();
 
-        return view('todayMovie');
+        return view('todayMovie', compact('todayMovie'));
     }
 }
